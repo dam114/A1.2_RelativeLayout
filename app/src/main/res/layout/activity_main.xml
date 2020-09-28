@@ -6,16 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,68 +28,86 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="85dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/editTextTextPersonName"
             android:text="TOPPING" />
 
         <CheckBox
             android:id="@+id/checkBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
             android:text="Whipped cream" />
+
 
         <CheckBox
             android:id="@+id/checkBox2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/checkBox"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="20dp"
             android:text="Chocolate" />
+
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/checkBox2"
             android:text="QUANTITY" />
 
+
         <LinearLayout
-            android:layout_width="156dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerInParent="true"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:text="-" />
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="0"
-                android:layout_height="31dp"
-                android:layout_weight="0.5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
                 android:text="2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:text="+" />
-
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="144dp"
             android:layout_height="36dp"
+            android:layout_above="@+id/button"
             android:text="ORDER SUMMARY" />
+
 
         <Button
             android:id="@+id/button"
-            android:layout_width="78dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
             android:text="ORDER" />
 
-    </LinearLayout>
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
